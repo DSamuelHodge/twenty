@@ -41,7 +41,8 @@ services:
   runtime: image
   image:
     url: twentycrm/twenty-postgres:latest
-  autoDeploy: false  
+  autoDeploy: false
+  disk:
     name: data
     mountPath: /var/lib/postgresql/data
     sizeGB: 10
