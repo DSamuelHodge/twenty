@@ -4,7 +4,7 @@ services:
   runtime: image
   plan: standard  
   image:
-    url: twentycrm/twenty:${TAG}  
+    url: twentycrm/twenty:main  
   dockerCommand: "sh -c ./scripts/render-run.sh"  
   autoDeploy: false  
   envVars:
@@ -40,7 +40,7 @@ services:
   plan: starter  
   runtime: image
   image:
-    url: twentycrm/twenty-postgres:latest
+    url: twentycrm/twenty-postgres:main
   autoDeploy: false
   disk:
     name: data
