@@ -2,17 +2,17 @@ services:
 - type: web
   name: twenty
   runtime: image
-  plan: standard  
+  plan: standard
   image:
-    url: twentycrm/twenty:main  
-  dockerCommand: "sh -c ./scripts/render-run.sh"  
-  autoDeploy: false  
+    url: twentycrm/twenty:main
+  dockerCommand: "sh -c ./scripts/render-run.sh"
+  autoDeploy: false 
   envVars:
   - key: FRONT_BASE_URL
     fromService:
       name: twenty
       type: web
-      envVarKey: RENDER_EXTERNAL_URL  
+      envVarKey: RENDER_EXTERNAL_URL
   - key: ACCESS_TOKEN_SECRET
     generateValue: true
   - key: LOGIN_TOKEN_SECRET
@@ -37,11 +37,11 @@ services:
     sizeGB: 5
 - type: pserv
   name: twenty_postgres
-  plan: starter  
+  plan: standard
   runtime: image
   image:
     url: twentycrm/twenty-postgres:main
-  autoDeploy: false
+  autoDeploy: false 
   disk:
     name: data
     mountPath: /var/lib/postgresql/data
