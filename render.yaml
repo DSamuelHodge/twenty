@@ -37,7 +37,7 @@ services:
     sizeGB: 5
 - type: pserv
   name: twenty_postgres
-  plan: starter  
+  plan: standard  
   runtime: image
   image:
     url: twentycrm/twenty-postgres:main
